@@ -1,3 +1,5 @@
+package JavaTriangulo;
+
 import java.util.Scanner;
 
 public class JavaTriangulo {
