@@ -23,10 +23,9 @@ public class main {
         System.out.println("you are " + age + " years old");
         System.out.println("Your gpa is " + gpa);
 
-        if(isStudent){
+        if (isStudent) {
             System.out.println("You are a student");
-        }
-        else{
+        } else {
             System.out.println("You are not a student");
         }
 

@@ -23,19 +23,17 @@ public class Main {
 
         System.out.println("My name is " + name);
         System.out.println("My age is " + age);
-        if(isStudent){
+        if (isStudent) {
             System.out.println("I am a student");
-        }
-        else {
+        } else {
             System.out.println("I am not a student");
         }
         System.out.println("My last grade was " + grade);
-        System.out.println("My choice is a " + color + " " +  year + " " + car);
+        System.out.println("My choice is a " + color + " " + year + " " + car);
 
-        if(forSale){
+        if (forSale) {
             System.out.println("There is a " + car + " for sale");
-        }
-        else{
+        } else {
             System.out.println("There is no " + car + " for sale");
         }
     }
