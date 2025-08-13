@@ -28,7 +28,7 @@ public class main
         // x++;
         // x--;
 
-        // Order of operations [P-E-M-D-A-S]
+        // Order of operations [P-E-M-D-A-S];
 
         double result = 3 + 4 * (7 - 5) / 2.0;
 
