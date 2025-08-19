@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class math {
     public static void main(String[] args) {
 
-        double result;
+       //  double result;
 /*
 
         result = Math.pow(2, 3); // pow = potencia;
