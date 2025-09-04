@@ -6,14 +6,24 @@ public class Account {
     private String nomeCorrentista;
     private double saldo;
     private double limite;
+    private String senha; // variável privada
 
-    public Account() {}
+    // Construtor sem parâmetros
+    public Account() {
+        this.numeroConta = 0;
+        this.nomeCorrentista = "";
+        this.saldo = 0.0;
+        this.limite = 0.0;
+        this.senha = "0000"; // senha padrão
+    }
 
-    public Account(int numeroConta, String nomeCorrentista, double saldo, double limite) {
+    // Construtor com parâmetros (saldo sempre 0.0 e senha padrão "0000")
+    public Account(int numeroConta, String nomeCorrentista, double limite) {
         this.numeroConta = numeroConta;
         this.nomeCorrentista = nomeCorrentista;
-        this.saldo = saldo;
+        this.saldo = 0.0;
         this.limite = limite;
+        this.senha = "0000";
     }
 
     public int getNumeroConta() {
@@ -36,16 +46,41 @@ public class Account {
         return saldo;
     }
 
-    public void setSaldo(double saldo) {
-        this.saldo = saldo;
-    }
-
     public double getLimite() {
         return limite;
     }
 
     public void setLimite(double limite) {
         this.limite = limite;
+    }
+
+    // Método de depósito
+    public boolean deposit(double value) {
+        if (value > 0) {
+            saldo += value;
+            return true;
+        }
+        return false;
+    }
+
+    // Método de saque
+    public boolean withdraw(double value) {
+        if (value <= 0) return false;
+
+        if (saldo + limite >= value) {
+            saldo -= value;
+            return true;
+        }
+        return false;
+    }
+
+    // Método de troca de senha
+    public boolean changePassword(String oldPass, String newPass) {
+        if (this.senha.equals(oldPass)) {
+            this.senha = newPass;
+            return true;
+        }
+        return false;
     }
 
     public void imprimir() {
